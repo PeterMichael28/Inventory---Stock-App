@@ -13,7 +13,8 @@ const path = require("path")
 
 connectDB()
 
-const errorHandler = require('./middleware/errorHandler')
+const errorHandler = require('./middleware/errorHandler');
+const corsOptions = require( './config/corsOption' );
 
 const app = express();
 
@@ -26,7 +27,7 @@ app.use( express.json() ); //to handle our json
 app.use( cookieParser() ); // cookie parser
 app.use( express.urlencoded( { extended: false } )); //handle data via url
 app.use( bodyParser.json() ); // to parse the data sent in the body from the frontend
-app.use( cors() ); // cors
+app.use( cors(corsOptions) ); // cors
 
 //setting the upload routes
 app.use('/uploads', express.static(path.join(__dirname, "uploads")))
