@@ -14,7 +14,7 @@ const ContactUs = expressAsyncHandler( async ( req, res ) => {
 
     if ( !user ) {
         res.status( 400 )
-        throw new Error( "User not found, please sign up")
+        throw new Error( "Unauthorized, please login to continue")
     }
 
 

@@ -4,18 +4,17 @@ import { BiLogIn } from "react-icons/bi";
 import Card from "../../components/card/Card";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { loginUser, registerUser, validateEmail } from "../../services/authService";
+import { loginUser,validateEmail } from "../../services/authService";
 import { useDispatch } from "react-redux";
 import { selectIsLoggedIn, SET_LOGIN, SET_NAME } from "../../store/features/auth/authSlice.js";
 import Loader from "../../components/loader/Loader";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
+
 
 const Login = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()  
 
-  const isLoggedIn = useSelector(selectIsLoggedIn)
 
   const initialState = {
     email: '',

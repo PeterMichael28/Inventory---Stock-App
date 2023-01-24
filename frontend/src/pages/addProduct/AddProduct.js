@@ -54,7 +54,7 @@ const AddProduct = () => {
     formData.append("description", description);
     formData.append("image", productImage);
 
-    console.log(...formData);
+    // console.log(...formData);
 
     const data = await dispatch(createProduct(formData));
     if(data.error?.message) return

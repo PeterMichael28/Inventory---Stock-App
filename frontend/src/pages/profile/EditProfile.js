@@ -55,12 +55,12 @@ const EditProfile = () => {
       ) {
         const image = new FormData();
         image.append("file", profileImage);
-        image.append("cloud_name", "zinotrust");
-        image.append("upload_preset", "wk66xdkq");
+        image.append("cloud_name", "dywawv0tg");
+        image.append("upload_preset", "m8ajjegp");
 
         // First save image to cloudinary
         const response = await fetch(
-          "https://api.cloudinary.com/v1_1/zinotrust/image/upload",
+          "https://api.cloudinary.com/v1_1/dywawv0tg/image/upload",
           { method: "post", body: image }
         );
         const imgData = await response.json();
@@ -75,7 +75,7 @@ const EditProfile = () => {
         };
 
         const data = await updateUser(formData);
-        console.log(data);
+        // console.log(data);
         toast.success("User updated");
         navigate("/profile");
         setIsLoading(false);
@@ -110,7 +110,7 @@ const EditProfile = () => {
               <label>Email:</label>
               <input type="text" name="email" value={profile?.email} disabled />
               <br />
-              <code>Email cannot be changed.</code>
+              <small>Email cannot be changed.</small>
             </p>
             <p>
               <label>Phone:</label>
@@ -121,7 +121,7 @@ const EditProfile = () => {
                 onChange={handleInputChange}
               />
             </p>
-            <p>
+            <p className="textarea">
               <label>Bio:</label>
               <textarea
                 name="bio"
@@ -136,7 +136,7 @@ const EditProfile = () => {
               <input type="file" name="image" onChange={handleImageChange} />
             </p>
             <div>
-              <button className="--btn --btn-primary">Edit Profile</button>
+              <button className="--btn --btn-primary">Save Update</button>
             </div>
           </span>
         </form>

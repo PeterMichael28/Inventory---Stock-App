@@ -1,5 +1,5 @@
 import Home from "./pages/Home/Home";
-import {BrowserRouter, Routes, Route, useNavigate, Navigate} from 'react-router-dom'
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Forgot from "./pages/auth/Forgot";
@@ -8,18 +8,18 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Layout from "./Layout/Layout";
 import Dashboard from "./pages/dashboard/Dashboard"
 import axios from 'axios';
-import { toast, ToastContainer} from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { loginStatus } from "./services/authService";
 import { useDispatch, useSelector } from "react-redux";
 import { selectIsLoggedIn, SET_LOGIN } from "./store/features/auth/authSlice.js";
 import { useEffect } from "react";
 import AddProduct from "./pages/addProduct/AddProduct";
-import { useState } from "react";
 import ProductDetail from "./pages/productDetail/ProductDetail";
 import EditProduct from "./pages/editProduct/EditProduct";
 import Profile from "./pages/profile/Profile";
 import EditProfile from "./pages/profile/EditProfile";
+import Contact from "./pages/contact/Contact";
 
 
 axios.defaults.withCredentials = true; //to accept all credentials from backend
@@ -114,6 +114,14 @@ function App() {
           </Sidebar>
         }></Route>
 
+        
+    <Route path="/contact-us" element={
+          <Sidebar>
+            <Layout>
+              <Contact />
+            </Layout>
+          </Sidebar>
+        }></Route>
       </Routes>
     </BrowserRouter>
   );

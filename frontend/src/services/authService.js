@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {toast} from 'react-toastify'
 
-const backendUrl = process.env.REACT_APP_BACKEND_URL;
+export const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 //register user
 export const registerUser = async (userData) => {
@@ -137,7 +137,7 @@ export const getUser = async () => {
   export const updateUser = async (formData) => {
     try {
       const response = await axios.patch(
-        `${backendUrl}/api/users/updateuser`,
+        `${backendUrl}/api/users/updateprofile`,
         formData
       );
       return response.data;
@@ -155,7 +155,7 @@ export const getUser = async () => {
   export const changePassword = async (formData) => {
     try {
       const response = await axios.patch(
-        `${backendUrl}/api/users/changepassword`,
+        `${backendUrl}/api/users/updatepassword`,
         formData
       );
       return response.data;

@@ -47,8 +47,8 @@ const Profile = () => {
               <p>
                 <b>Name : </b> {profile?.name}
               </p>
-              <p>
-                <b>Email : </b> {profile?.email}
+              <p style={{color: 'crimson', fontWeight: "bold"}}>
+                <b  style={{color: 'black'}}>Email : </b> {profile?.email}
               </p>
               <p>
                 <b>Phone : </b> {profile?.phone}

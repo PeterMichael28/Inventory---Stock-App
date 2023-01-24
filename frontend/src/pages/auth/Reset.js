@@ -17,7 +17,7 @@ const Reset = () => {
 
   }
 
-  const [isLoading, setIsLoading] = useState(false)
+  
   const [ formData, setformData ] = useState( initialState )
   
   const {password2, password} = formData

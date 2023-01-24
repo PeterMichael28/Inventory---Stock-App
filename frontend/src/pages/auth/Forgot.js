@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./auth.module.scss";
 import { AiOutlineMail } from "react-icons/ai";
 import Card from "../../components/card/Card";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { forgotPassword, validateEmail } from "../../services/authService";
 import { toast } from "react-toastify";
 

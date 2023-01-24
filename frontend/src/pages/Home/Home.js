@@ -1,23 +1,22 @@
 import React from "react";
-import { RiProductHuntLine } from "react-icons/ri";
+import { TbLetterM } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import "./Home.scss";
 import heroImg from "../../assets/inv-img.png";
-import { useSelector } from "react-redux";
-import { selectIsLoggedIn } from "../../store/features/auth/authSlice.js";
+// import { useSelector } from "react-redux";
+// import { selectIsLoggedIn } from "../../store/features/auth/authSlice.js";
 import { ShowOnLogin, ShowOnLogout } from "../../components/protect/HiddenLink";
 // import { ShowOnLogin, ShowOnLogout } from "../../components/protect/HiddenLink";
 
 const Home = () => {
 
-  const isLoggedIn = useSelector( selectIsLoggedIn )
   
   // console.log('Home', isLoggedIn)
   return (
     <div className="home">
       <nav className="container --flex-between ">
         <div className="logo">
-          <RiProductHuntLine size={35} />
+          <TbLetterM size={35} />
         </div>
 
         <ul className="home-links">

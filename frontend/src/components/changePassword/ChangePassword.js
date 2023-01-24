@@ -34,7 +34,8 @@ const ChangePassword = () => {
     };
 
     const data = await changePassword(formData);
-    toast.success(data);
+    // console.log(data)
+    toast.success(data.message);
     navigate("/profile");
   };
 

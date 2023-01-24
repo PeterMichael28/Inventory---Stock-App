@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+
 import { logoutUser } from "../../services/authService";
-import { selectIsLoggedIn, selectName, SET_LOGIN } from "../../store/features/auth/authSlice.js";
+import {  selectName, SET_LOGIN } from "../../store/features/auth/authSlice.js";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -20,6 +20,7 @@ const Header = () => {
     // console.log(res)
     navigate("/login");
   };
+
 
   return (
     <div className="--pad header">
